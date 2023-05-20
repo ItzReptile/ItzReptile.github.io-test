@@ -31,21 +31,20 @@ function contact(event) {
   loading.classList += " modal__overlay--visible";
   emailjs
     .sendForm(
-      "service_6c8vijq",
-      "template_i2mzb9e",
+      "service_jb9aq7y",
+      "template_gj6pkjc",
       event.target,
-      "I5fdg-z-8mcS4xu3e"
     )
-    .then(() => {
-      loading.classList.remove("modal__overlay--visible");
-      success.classList += " modal__overlay--visible";
-    })
-    .catch(() => {
-      loading.classList.remove("modal__overlay--visible");
-      alert(
-        "the shit is down right now only because my teacher provided me a shitty gmailjs"
-      );
-    });
+       .then(() => {
+        loading.classList.remove("modal__overlay--visible");
+        success.classList += " modal__overlay--visible";
+       })
+       .catch(() => {
+         loading.classList.remove("modal__overlay--visible");
+        alert(
+          "the shit is down right now only because my teacher provided me a shitty gmailjs"
+        );
+        });
 }
 let isModalopen = false;
 function togglemodal() {
